@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+  <style>
+    body { margin: 0; font-family: 'Chakra Petch', 'Segoe UI', system-ui, sans-serif; }
+    a { color: #38BDF8; } a:hover { color: #7DD3FC; }
+  </style>
+</helmet>
+
+<div style="width: 390px; height: 844px; position: relative; background: #02050a; color: #C7E4F5; overflow: hidden;">
+  <div style="position:absolute; inset:0; background: radial-gradient(85% 45% at 50% 38%, rgba(56,189,248,.20), transparent 62%);"></div>
+  <div style="position:absolute; inset:0; opacity:.35; background: repeating-linear-gradient(180deg, rgba(56,189,248,.05) 0 1px, transparent 1px 4px);"></div>
+
+  <div style="position: relative; display: flex; flex-direction: column; height: 100%; align-items: center;">
+
+    <div style="padding: 26px 20px 0; text-align: center;">
+      <div style="font-size: 11px; font-weight: 700; letter-spacing: .46em; color: #2E7EA5;">INSTANT DUNGEON</div>
+    </div>
+
+    <div style="margin-top: 34px; font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: .3em; color: #3E6C86;">OBJECTIVE</div>
+    <div style="margin: 9px 34px 0; text-align: center; font-size: 19px; font-weight: 600; line-height: 1.35; letter-spacing: .03em; color: #EAF6FF;">Ship the migration<br>end to end</div>
+
+    <!-- Timer ring -->
+    <div style="margin-top: 40px; position: relative; width: 244px; height: 244px;">
+      <svg width="244" height="244" viewBox="0 0 244 244" style="position:absolute; inset:0; transform: rotate(-90deg);">
+        <circle cx="122" cy="122" r="110" fill="none" stroke="rgba(56,189,248,.13)" stroke-width="2"/>
+        <circle cx="122" cy="122" r="110" fill="none" stroke="#38BDF8" stroke-width="3"
+                stroke-dasharray="691.15" stroke-dashoffset="228" stroke-linecap="round"
+                style="filter: drop-shadow(0 0 9px rgba(56,189,248,.85));"/>
+      </svg>
+      <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: .3em; color: #3E6C86;">REMAINING</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 50px; font-weight: 700; line-height: 1; color: #EAF6FF; text-shadow: 0 0 26px rgba(56,189,248,.55);">23:14</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: .14em; color: #3E6C86;">OF 50:00 · MIND</div>
+      </div>
+    </div>
+
+    <div style="margin-top: 30px; padding: 0 30px; text-align: center; font-size: 12px; line-height: 1.6; color: #6F97AC;">
+      Time is measured by the System, not by this screen.<br>Closing the tab changes nothing.
+    </div>
+
+    <div style="flex-grow: 1;"></div>
+
+    <!-- Clear is not offered until the time is served -->
+    <div style="width: 100%; padding: 0 24px 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px;">
+      <div style="padding: 15px 0; text-align: center; border: 1px solid rgba(56,189,248,.16); background: rgba(56,189,248,.04);">
+        <div style="font-size: 12px; letter-spacing: .2em; color: #345F76;">CLEAR — LOCKED FOR 23:14</div>
+      </div>
+      <div style="padding: 14px 0; text-align: center; border: 1px solid rgba(248,113,113,.34);">
+        <div style="font-size: 12px; letter-spacing: .2em; color: #E9A6A6;">FLEE</div>
+      </div>
+      <div style="text-align: center; font-size: 11px; color: #5C7C93;">Fleeing pays 40% of the time served, and drops nothing.</div>
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

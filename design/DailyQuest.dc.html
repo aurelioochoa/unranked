@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+  <style>
+    body { margin: 0; font-family: 'Chakra Petch', 'Segoe UI', system-ui, sans-serif; }
+    a { color: #38BDF8; } a:hover { color: #7DD3FC; }
+    .scan { position: absolute; inset: 0; pointer-events: none; opacity: .5;
+      background: repeating-linear-gradient(180deg, rgba(56,189,248,.055) 0 1px, transparent 1px 3px); }
+    .brk { position: relative; }
+    .brk::before, .brk::after { content: ''; position: absolute; width: 11px; height: 11px; }
+    .brk::before { top: -1px; left: -1px; border-top: 2px solid currentColor; border-left: 2px solid currentColor; }
+    .brk::after { bottom: -1px; right: -1px; border-bottom: 2px solid currentColor; border-right: 2px solid currentColor; }
+  </style>
+</helmet>
+
+<div style="width: 390px; height: 844px; position: relative; background: #04070d; color: #C7E4F5; overflow: hidden;">
+  <div style="position:absolute; inset:0; background: radial-gradient(120% 55% at 50% -8%, rgba(56,189,248,.15), transparent 60%);"></div>
+  <div class="scan"></div>
+
+  <div style="position: relative; display: flex; flex-direction: column; height: 100%;">
+
+    <div style="padding: 18px 20px 8px; display: flex; align-items: baseline; justify-content: space-between;">
+      <div style="font-size: 15px; font-weight: 700; letter-spacing: .34em; color: #7DD3FC; text-shadow: 0 0 14px rgba(56,189,248,.6);">DAILY QUEST</div>
+      <div style="display:flex; align-items:center; gap:6px;">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="1.8" stroke-linecap="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 700; color: #F87171; letter-spacing: .06em;">07:42:11</div>
+      </div>
+    </div>
+
+    <!-- The System speaks -->
+    <div style="margin: 6px 16px 0; padding: 12px 14px; background: linear-gradient(180deg, rgba(13,32,50,.9), rgba(8,20,32,.7)); border: 1px solid rgba(56,189,248,.3); border-left: 3px solid #38BDF8;">
+      <div style="font-size: 12.5px; line-height: 1.55; color: #BFE6FA;">
+        [Daily Quest has arrived.] 6 tasks for Aurelio, Level 14, Rank E.
+        <span style="color: #8FB4C9;">The System notes diminishing returns. What was once training is now habit ("Strength Training").</span>
+      </div>
+      <div style="margin-top: 8px; font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: .16em; color: #476B82;">SPEAKING · WEBSPEECH · DANIEL</div>
+    </div>
+
+    <div style="margin: 16px 16px 8px; display: flex; align-items: center; justify-content: space-between;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: .24em; color: #476B82;">2 / 6 CLEARED</div>
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: .16em; color: #476B82;">FULL CLEAR +25%</div>
+    </div>
+
+    <div style="margin: 0 16px; display: flex; flex-direction: column; gap: 9px;">
+
+      <!-- Decayed quest — the signature state -->
+      <div class="brk" style="color: rgba(56,189,248,.45); padding: 13px 14px; background: rgba(10,24,38,.8); border: 1px solid rgba(56,189,248,.22);">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 10px;">
+          <div style="display:flex; flex-direction:column; gap:5px;">
+            <div style="font-size: 14.5px; font-weight: 600; letter-spacing: .05em; color: #EAF6FF;">Strength Training</div>
+            <div style="display:flex; gap:7px; align-items:center;">
+              <span style="font-family:'JetBrains Mono',monospace; font-size:8.5px; letter-spacing:.16em; color:#5C87A3; border:1px solid rgba(56,189,248,.28); padding:2px 5px;">BODY</span>
+              <span style="font-family:'JetBrains Mono',monospace; font-size:9px; color:#5C87A3;">STR · VIT</span>
+            </div>
+          </div>
+          <div style="display:flex; flex-direction:column; align-items:flex-end; gap:2px;">
+            <div style="font-family:'JetBrains Mono',monospace; font-size:16px; font-weight:700; color:#7A6640;">+67</div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:9px; color:#5C7C93; text-decoration: line-through;">160</div>
+          </div>
+        </div>
+        <div style="margin-top: 11px; display: flex; align-items: center; gap: 9px;">
+          <div style="flex-grow:1; height: 3px; background: rgba(248,113,113,.14);"><div style="width: 42%; height:100%; background: linear-gradient(90deg,#7A6640,#C08A3E);"></div></div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:.08em; color:#C08A3E;">×0.42</div>
+        </div>
+        <div style="margin-top: 6px; font-size: 11px; color: #7E9DB0;">8 days unbroken. Worth less each day — change it or escalate it.</div>
+      </div>
+
+      <!-- Fresh quest -->
+      <div class="brk" style="color: rgba(56,189,248,.45); padding: 13px 14px; background: rgba(10,24,38,.8); border: 1px solid rgba(56,189,248,.22);">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 10px;">
+          <div style="display:flex; flex-direction:column; gap:5px;">
+            <div style="font-size: 14.5px; font-weight: 600; letter-spacing: .05em; color: #EAF6FF;">Face the Numbers</div>
+            <div style="display:flex; gap:7px; align-items:center;">
+              <span style="font-family:'JetBrains Mono',monospace; font-size:8.5px; letter-spacing:.16em; color:#F0C97A; border:1px solid rgba(240,201,122,.35); padding:2px 5px;">WORK</span>
+              <span style="font-family:'JetBrains Mono',monospace; font-size:9px; color:#5C87A3;">CRA · PER</span>
+            </div>
+          </div>
+          <div style="display:flex; flex-direction:column; align-items:flex-end; gap:2px;">
+            <div style="font-family:'JetBrains Mono',monospace; font-size:16px; font-weight:700; color:#38BDF8;">+113</div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:9px; color:#5C7C93;">90</div>
+          </div>
+        </div>
+        <div style="margin-top: 11px; display: flex; align-items: center; gap: 9px;">
+          <div style="flex-grow:1; height: 3px; background: rgba(56,189,248,.14);"><div style="width: 100%; height:100%; background: linear-gradient(90deg,#1E7FB8,#7DD3FC);"></div></div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:.08em; color:#7DD3FC;">×1.25</div>
+        </div>
+        <div style="margin-top: 6px; font-size: 11px; color: #7E9DB0;">Never attempted. Full value, and a novelty bonus.</div>
+      </div>
+
+      <!-- Cleared -->
+      <div style="padding: 13px 14px; background: rgba(8,18,28,.55); border: 1px solid rgba(56,189,248,.10);">
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px;">
+          <div style="display:flex; align-items:center; gap:9px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2E6B85" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            <div style="font-size: 14px; color: #4E7A90; text-decoration: line-through;">Seven Hours</div>
+          </div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#2E6B85;">+58</div>
+        </div>
+      </div>
+
+      <div style="padding: 13px 14px; background: rgba(8,18,28,.55); border: 1px solid rgba(56,189,248,.10);">
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px;">
+          <div style="display:flex; align-items:center; gap:9px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2E6B85" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            <div style="font-size: 14px; color:#4E7A90; text-decoration: line-through;">Sit in Silence</div>
+          </div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#2E6B85;">+79</div>
+        </div>
+      </div>
+
+      <div style="padding: 12px 14px; border: 1px dashed rgba(56,189,248,.20); text-align: center;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.16em; color:#476B82;">+ 2 MORE</span>
+      </div>
+    </div>
+
+    <div style="flex-grow: 1;"></div>
+
+    <div style="margin: 0 16px 14px; padding: 11px 14px; border: 1px solid rgba(248,113,113,.32); background: rgba(248,113,113,.07);">
+      <div style="font-size: 11.5px; color: #E9A6A6; line-height: 1.5;">[Failure to complete the Daily Quest will result in an appropriate penalty.]</div>
+    </div>
+
+    <div style="display: flex; border-top: 1px solid rgba(56,189,248,.22); background: rgba(6,16,26,.9);">
+      <div style="flex-grow: 1; padding: 13px 0; text-align: center; font-size: 10px; letter-spacing: .18em; color: #5C87A3;">STATUS</div>
+      <div style="flex-grow: 1; padding: 13px 0; text-align: center; font-size: 10px; letter-spacing: .18em; color: #04070d; background: #38BDF8;">QUESTS</div>
+      <div style="flex-grow: 1; padding: 13px 0; text-align: center; font-size: 10px; letter-spacing: .18em; color: #5C87A3;">DUNGEON</div>
+      <div style="flex-grow: 1; padding: 13px 0; text-align: center; font-size: 10px; letter-spacing: .18em; color: #5C87A3;">SYSTEM</div>
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

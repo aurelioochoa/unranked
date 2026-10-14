@@ -1,0 +1,28 @@
+{
+  "pages": [
+    { "id": "page-1", "name": "Screens" },
+    { "id": "page-2", "name": "Themes" }
+  ],
+  "artboards": [
+    { "file": "Main.dc.html",       "x": 0,    "y": 0,    "w": 390, "h": 844, "page": "page-1", "title": "Status" },
+    { "file": "DailyQuest.dc.html", "x": 490,  "y": 0,    "w": 390, "h": 844, "page": "page-1", "title": "Daily Quest" },
+    { "file": "Dungeon.dc.html",    "x": 980,  "y": 0,    "w": 390, "h": 844, "page": "page-1", "title": "Instant Dungeon" },
+    { "file": "Penalty.dc.html",    "x": 1470, "y": 0,    "w": 390, "h": 844, "page": "page-1", "title": "Penalty Zone" },
+    { "file": "LevelUp.dc.html",    "x": 1960, "y": 0,    "w": 390, "h": 844, "page": "page-1", "title": "Level Up" },
+    { "file": "Settings.dc.html",   "x": 2450, "y": 0,    "w": 390, "h": 844, "page": "page-1", "title": "System Settings" },
+    { "file": "ThemeMonarch.dc.html",  "x": 0,   "y": 0, "w": 390, "h": 844, "page": "page-2", "title": "Monarch" },
+    { "file": "ThemeTerminal.dc.html", "x": 490, "y": 0, "w": 390, "h": 844, "page": "page-2", "title": "Terminal" },
+    { "file": "ThemeFalna.dc.html",    "x": 980, "y": 0, "w": 390, "h": 844, "page": "page-2", "title": "Falna" }
+  ],
+  "annotations": [
+    { "id": "decay-note", "x": 490, "y": -150, "w": 390,
+      "text": "The signature element: every quest shows what it is worth RIGHT NOW.\n×0.42 after eight identical days, ×1.25 for something never attempted.\nThis is the anti-plateau rule made visible — the thing the other apps in this genre don't do." },
+    { "id": "dungeon-note", "x": 980, "y": -150, "w": 390,
+      "text": "CLEAR is locked until the time is genuinely served. Elapsed time is computed server-side from the persisted start, so closing the tab changes nothing.\nThe only verified mechanic in the app, which is why it pays best." },
+    { "id": "penalty-note", "x": 1470, "y": -170, "w": 390,
+      "text": "Real stakes, recoverable: a debuff with a floor at 40%, an escalation counter, and a way out that requires evidence.\nNothing already earned is ever destroyed." },
+    { "id": "themes-note", "x": 0, "y": -150, "w": 880, "page": "page-2",
+      "text": "Same Status screen, three other themes. Hologram (page 1) is the default.\nAll four ship as CSS custom-property sets — semantic tokens only, no raw hex in components, so they cannot drift apart." }
+  ],
+  "launch": { "view": "canvas", "page": "page-1" }
+}

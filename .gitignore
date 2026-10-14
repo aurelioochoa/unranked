@@ -1,0 +1,36 @@
+# deps
+node_modules/
+.pnpm-store/
+
+# next
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+
+# runtime data — the System's own state never goes in git
+data/
+!data/.gitkeep
+
+# env
+.env
+.env.local
+.env*.local
+
+# test artefacts
+coverage/
+test-results/
+playwright-report/
+.vitest/
+
+# os
+.DS_Store
+*.log
+
+# seeded design-canvas output (rebuilt from design/*.dc.html)
+unranked-system-screens.html
+
+# Generated from installed speech runtime dependencies
+public/assistant/ort/
+public/assistant/piper/
+public/assistant/piper.worker.js

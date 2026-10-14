@@ -1,0 +1,87 @@
+/* The immersive layer inherits every palette, including the light themes. */
+.experience { position: relative; z-index: 2; }
+.experience-bar { max-width: 1124px; margin: auto; padding: 22px 16px 14px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.experience-brand { font-family: var(--font-display-theme); font-size: 20px; font-weight: 600; letter-spacing: -.04em; color: var(--color-ink); }
+.experience-brand > span:first-child { color: var(--color-accent); margin-right: 9px; }
+.experience-edition { font-family: var(--font-mono); font-size: 9px; letter-spacing: .14em; color: var(--color-ink-faint); margin-left: 14px; }
+.sound-toggle, .core-motion { color: var(--color-ink-muted); font-family: var(--font-mono); font-size: 10px; cursor: pointer; min-height: 36px; padding: 8px 10px; border: 1px solid var(--color-panel-border); background: var(--color-panel-soft); }
+.sound-toggle[aria-pressed='true'] { color: var(--color-accent-bright); }
+.sound-toggle > span { padding-right: 6px; }
+.experience .shell { min-height: calc(100dvh - 72px); }
+.status-header { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; padding-top: 38px; padding-bottom: 30px; }
+.status-header h1 { font-family: var(--font-display-theme); font-size: clamp(38px, 5vw, 62px); line-height: 1.06; letter-spacing: -.045em; font-weight: 600; margin-top: 16px; color: var(--color-ink); }
+.status-header h1 span { color: var(--color-accent-bright); }
+.status-intro { max-width: 290px; font-size: 13px; line-height: 1.8; color: var(--color-ink-muted); padding-bottom: 4px; text-wrap: pretty; }
+.status-dashboard { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.15fr); gap: 24px; align-items: start; }
+.status-identity, .status-details { gap: 20px; min-width: 0; }
+.hunter-core { position: relative; border: 1px solid var(--color-panel-border); background: radial-gradient(ellipse at 50% 48%, var(--color-ground-glow), transparent 70%), var(--color-panel-soft); overflow: hidden; }
+.core-heading, .core-footer { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 16px 20px; }
+.core-live { color: var(--color-accent); font: 10px var(--font-mono); }
+.core-stage { display: block; width: 100%; height: 310px; position: relative; border: 0; background: transparent; cursor: pointer; }
+.core-stage canvas { width: 100%; height: 100%; display: block; }
+.core-rank { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font: 600 66px var(--font-display-theme); color: var(--color-accent-bright); text-shadow: var(--text-glow); opacity: .85; pointer-events: none; }
+.core-footer { border-top: 1px solid var(--color-panel-border-dim); padding-top: 10px; padding-bottom: 10px; }
+.core-footer .label { font-size: 9px; letter-spacing: .08em; }
+.core-motion { border: 0; background: transparent; white-space: nowrap; }
+.hunter-identity { padding: 24px; }
+.hunter-identity h2 { font: 600 26px var(--font-display-theme); color: var(--color-ink); margin-top: 4px; overflow-wrap: anywhere; }
+.level-badge { display: grid; text-align: right; gap: 3px; }
+.level-badge strong { color: var(--color-accent-bright); font-size: 38px; line-height: 1; }
+.xp-label { margin: 24px 0 10px; gap: 10px; }
+.xp-label .numeric { font-size: 10px; }
+.identity-footer { padding-top: 18px; margin-top: 22px; border-top: 1px solid var(--color-panel-border-dim); }
+.gold-value { color: var(--color-craft); font-size: 20px; }
+.daily-brief { padding: 24px; }
+.daily-brief > .between { gap: 12px; flex-wrap: wrap; }
+.daily-brief h3 { font: 600 clamp(23px, 3vw, 30px) var(--font-display-theme); letter-spacing: -.025em; margin: 24px 0 8px; color: var(--color-ink); }
+.daily-brief p { font-size: 14px; color: var(--color-ink-muted); line-height: 1.6; overflow-wrap: anywhere; }
+.daily-progress { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin: 26px 0 12px; }
+.daily-progress strong { color: var(--color-ink); font-size: 24px; }
+.daily-progress strong span { font-size: 14px; color: var(--color-ink-faint); }
+.daily-bonus { font: 10px var(--font-mono); color: var(--color-craft); margin-left: auto; }
+.directive-link { margin-top: 22px; display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 14px 18px; }
+.abilities-panel { padding: 22px 24px; }
+.ability-list { margin-top: 18px; }
+.ability-row { display: grid; grid-template-columns: 20px minmax(0, 1fr) 36px minmax(50px, 100px); align-items: center; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--color-panel-border-dim); }
+.ability-row:last-child { border-bottom: 0; }
+.ability-index { font-size: 9px; color: var(--color-ink-faint); }
+.ability-name { display: grid; gap: 3px; }
+.ability-name strong { font-weight: 500; color: var(--color-ink); font-size: 14px; }
+.ability-name > span, .ability-progress > span:last-child { font-size: 9px; color: var(--color-ink-faint); }
+.ability-value { font-size: 22px; color: var(--color-accent-bright); text-align: right; }
+.ability-row--craft .ability-value { color: var(--color-craft); }
+.ability-row--craft .bar i { background: var(--color-craft); }
+.ability-progress { display: grid; gap: 6px; text-align: right; }
+.ability-note { margin: 18px 0 0; font-size: 11px; line-height: 1.7; color: var(--color-ink-faint); max-width: 48ch; }
+.status-footer { grid-column: 1 / -1; display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; align-items: center; }
+.status-footer a { color: var(--color-ink-muted); font-size: 12px; }
+.quest-error { color: var(--color-danger); font-size: 12px; margin: 10px 0 0; }
+.experience button, .experience a { transition: color .2s, background .2s, border-color .2s, box-shadow .2s, transform .2s; }
+.experience button:focus-visible, .experience a:focus-visible { outline: 2px solid var(--color-accent-bright); outline-offset: 4px; }
+.experience button:disabled { cursor: wait; opacity: .6; }
+.experience .btn:active:not(:disabled) { transform: translateY(1px); }
+.experience .quest { transition: border-color .2s, box-shadow .2s; }
+.experience .quest:hover { border-color: var(--color-accent-dim); box-shadow: inset 3px 0 var(--color-accent-dim); }
+@media (min-width: 900px) {
+  .status-identity { position: sticky; top: 76px; }
+  .experience .nav a { min-width: 110px; }
+  .experience .nav a[aria-current='page'] { box-shadow: inset 0 -2px var(--color-accent); }
+}
+@media (max-width: 899px) {
+  .experience-bar { max-width: 520px; }
+  .experience-edition { display: none; }
+  .status-header { display: block; padding-top: 24px; }
+  .status-intro { margin-top: 18px; }
+  .status-dashboard { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .core-stage { height: 260px; }
+  .status-footer { flex-direction: column; align-items: flex-start; }
+  .daily-brief, .abilities-panel, .hunter-identity { padding: 20px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .status-header, .status-dashboard { animation: system-arrive .6s ease both; }
+  .status-dashboard { animation-delay: .08s; }
+  @keyframes system-arrive { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+}
+@media (prefers-reduced-motion: reduce) {
+  .experience *, .experience *::before, .experience *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

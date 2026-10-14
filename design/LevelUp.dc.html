@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+  <style>
+    body { margin: 0; font-family: 'Chakra Petch', 'Segoe UI', system-ui, sans-serif; }
+    a { color: #38BDF8; } a:hover { color: #7DD3FC; }
+  </style>
+</helmet>
+
+<div style="width: 390px; height: 844px; position: relative; background: #04070d; color: #C7E4F5; overflow: hidden;">
+  <div style="position:absolute; inset:0; background: radial-gradient(90% 50% at 50% 22%, rgba(56,189,248,.26), transparent 64%);"></div>
+  <div style="position:absolute; inset:0; opacity:.4; background: repeating-linear-gradient(180deg, rgba(56,189,248,.06) 0 1px, transparent 1px 3px);"></div>
+
+  <div style="position: relative; display: flex; flex-direction: column; height: 100%; align-items: center;">
+
+    <div style="margin-top: 74px; font-size: 13px; font-weight: 700; letter-spacing: .52em; color: #7DD3FC; text-shadow: 0 0 20px rgba(56,189,248,.8);">LEVEL UP</div>
+
+    <div style="margin-top: 22px; display: flex; align-items: center; gap: 18px;">
+      <div style="font-family:'JetBrains Mono',monospace; font-size: 40px; font-weight: 700; color: #2E6B85;">14</div>
+      <svg width="30" height="16" viewBox="0 0 30 16" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h24M20 2l6 6-6 6"/></svg>
+      <div style="font-family:'JetBrains Mono',monospace; font-size: 66px; font-weight: 700; line-height:1; color: #EAF6FF; text-shadow: 0 0 34px rgba(56,189,248,.85);">15</div>
+    </div>
+
+    <div style="margin-top: 26px; padding: 10px 20px; border: 1px solid rgba(56,189,248,.45); background: rgba(56,189,248,.09);">
+      <div style="font-size: 12.5px; letter-spacing: .16em; color: #BFE6FA;">+3 ABILITY POINTS</div>
+    </div>
+
+    <div style="margin: 20px 34px 0; text-align: center; font-size: 12.5px; line-height: 1.6; color: #7E9DB0;">
+      Assign them yourself.<br>The System will not choose for you.
+    </div>
+
+    <!-- Allocation -->
+    <div style="margin: 30px 22px 0; width: 100%; box-sizing: border-box; padding: 0 22px; display: flex; flex-direction: column; gap: 11px;">
+      <div style="display:flex; align-items:center; gap: 12px;">
+        <div style="width: 36px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#7FAEC8;">STR</div>
+        <div style="width: 34px; font-family:'JetBrains Mono',monospace; font-size:19px; font-weight:700; color:#EAF6FF; text-align:right;">24</div>
+        <div style="flex-grow:1;"></div>
+        <div style="width:34px; height:34px; display:flex; align-items:center; justify-content:center; border:1px solid rgba(56,189,248,.2);"><svg width="13" height="13" viewBox="0 0 24 24" stroke="#2E6B85" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14"/></svg></div>
+        <div style="width:34px; height:34px; display:flex; align-items:center; justify-content:center; border:1px solid rgba(56,189,248,.55); background: rgba(56,189,248,.1);"><svg width="13" height="13" viewBox="0 0 24 24" stroke="#7DD3FC" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
+      </div>
+
+      <div style="display:flex; align-items:center; gap: 12px;">
+        <div style="width: 36px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#7FAEC8;">VIT</div>
+        <div style="width: 34px; font-family:'JetBrains Mono',monospace; font-size:19px; font-weight:700; color:#EAF6FF; text-align:right;">19</div>
+        <div style="flex-grow:1;"></div>
+        <div style="width:34px; height:34px; display:flex; align-items:center; justify-content:center; border:1px solid rgba(56,189,248,.2);"><svg width="13" height="13" viewBox="0 0 24 24" stroke="#2E6B85" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14"/></svg></div>
+        <div style="width:34px; height:34px; display:flex; align-items:center; justify-content:center; border:1px solid rgba(56,189,248,.55); background: rgba(56,189,248,.1);"><svg width="13" height="13" viewBox="0 0 24 24" stroke="#7DD3FC" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
+      </div>
+
+      <div style="display:flex; align-items:center; gap: 12px;">
+        <div style="width: 36px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#7DD3FC;">PER</div>
+        <div style="width: 34px; font-family:'JetBrains Mono',monospace; font-size:19px; font-weight:700; color:#7DD3FC; text-align:right;">14</div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#38BDF8;">+2</div>
+        <div style="flex-grow:1;"></div>
+        <div style="width:34px; height:34px; display:flex; align-items:center; justify-content:center; border:1px solid rgba(56,189,248,.55);"><svg width="13" height="13" viewBox="0 0 24 24" stroke="#7DD3FC" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14"/></svg></div>
+        <div style="width:34px; height:34px; display:flex; align-items:center; justify-content:center; border:1px solid rgba(56,189,248,.55); background: rgba(56,189,248,.1);"><svg width="13" height="13" viewBox="0 0 24 24" stroke="#7DD3FC" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
+      </div>
+
+      <div style="margin-top: 4px; display:flex; align-items:center; justify-content: space-between;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.18em; color:#476B82;">3 MORE ABILITIES</div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.1em; color:#38BDF8;">1 POINT LEFT</div>
+      </div>
+    </div>
+
+    <div style="flex-grow: 1;"></div>
+
+    <div style="width: 100%; box-sizing:border-box; padding: 0 22px 30px;">
+      <div style="padding: 15px 0; text-align: center; background: #38BDF8;">
+        <div style="font-size: 12.5px; font-weight: 600; letter-spacing: .22em; color: #04070d;">CONFIRM</div>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

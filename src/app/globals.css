@@ -1,0 +1,6 @@
+@import '../ui/themes.css';
+@import '../ui/components.css';
+@import '../ui/experience.css';
+
+/* Tailwind scans only real source, never build output or the design folder. */
+@source '../../src';

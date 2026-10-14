@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+  <style>
+    body { margin: 0; font-family: 'Chakra Petch', 'Segoe UI', system-ui, sans-serif; }
+    a { color: #38BDF8; } a:hover { color: #7DD3FC; }
+    .lbl { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: .24em; color: #476B82; }
+    .row { display: flex; align-items: center; justify-content: space-between; padding: 11px 13px;
+           border: 1px solid rgba(56,189,248,.18); background: rgba(10,24,38,.6); }
+    .val { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #9AC9E4; }
+  </style>
+</helmet>
+
+<div style="width: 390px; height: 844px; position: relative; background: #04070d; color: #C7E4F5; overflow: hidden;">
+  <div style="position:absolute; inset:0; background: radial-gradient(120% 50% at 50% -8%, rgba(56,189,248,.13), transparent 60%);"></div>
+  <div style="position:absolute; inset:0; opacity:.45; background: repeating-linear-gradient(180deg, rgba(56,189,248,.05) 0 1px, transparent 1px 3px);"></div>
+
+  <div style="position: relative; display: flex; flex-direction: column; height: 100%;">
+
+    <div style="padding: 18px 20px 12px;">
+      <div style="font-size: 15px; font-weight: 700; letter-spacing: .42em; color: #7DD3FC; text-shadow: 0 0 14px rgba(56,189,248,.6);">SYSTEM</div>
+    </div>
+
+    <div style="padding: 0 16px; display: flex; flex-direction: column; gap: 16px; overflow: hidden;">
+
+      <!-- Themes -->
+      <div style="display:flex; flex-direction:column; gap:8px;">
+        <div class="lbl">INTERFACE</div>
+        <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px;">
+          <div style="border: 1px solid #38BDF8; background: #04070d; padding: 10px 6px; text-align:center;">
+            <div style="height:22px; background: linear-gradient(180deg,#0D2032,#04070d); border:1px solid rgba(56,189,248,.6);"></div>
+            <div style="margin-top:6px; font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:.1em; color:#7DD3FC;">HOLO</div>
+          </div>
+          <div style="border: 1px solid rgba(56,189,248,.16); padding: 10px 6px; text-align:center;">
+            <div style="height:22px; background: linear-gradient(180deg,#1A0F2E,#0A0710); border:1px solid rgba(212,168,85,.5);"></div>
+            <div style="margin-top:6px; font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:.1em; color:#5C87A3;">MONARCH</div>
+          </div>
+          <div style="border: 1px solid rgba(56,189,248,.16); padding: 10px 6px; text-align:center;">
+            <div style="height:22px; background: #0B0B0C; border:1px solid rgba(232,163,61,.5);"></div>
+            <div style="margin-top:6px; font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:.1em; color:#5C87A3;">TERM</div>
+          </div>
+          <div style="border: 1px solid rgba(56,189,248,.16); padding: 10px 6px; text-align:center;">
+            <div style="height:22px; background: #14100C; border:1px solid rgba(176,141,87,.55);"></div>
+            <div style="margin-top:6px; font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:.1em; color:#5C87A3;">FALNA</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Intelligence -->
+      <div style="display:flex; flex-direction:column; gap:8px;">
+        <div class="lbl">INTELLIGENCE</div>
+        <div class="row"><span style="font-size:13px;">Provider</span><span class="val">ollama ▾</span></div>
+        <div class="row"><span style="font-size:13px;">Model</span><span class="val">deepseek-r1</span></div>
+        <div class="row"><span style="font-size:13px;">Endpoint</span><span class="val">localhost:11434</span></div>
+        <div style="padding: 9px 13px; border-left: 2px solid rgba(56,189,248,.4); font-size: 11.5px; color: #6F97AC; line-height:1.5;">
+          Anthropic · OpenAI · Google · Ollama · any OpenAI-compatible · none.<br>With none, the System still speaks — from its own script.
+        </div>
+      </div>
+
+      <!-- Voice -->
+      <div style="display:flex; flex-direction:column; gap:8px;">
+        <div class="lbl">VOICE</div>
+        <div class="row"><span style="font-size:13px;">Engine</span><span class="val">webspeech ▾</span></div>
+        <div class="row"><span style="font-size:13px;">Voice</span><span class="val">Daniel (en-GB) ▾</span></div>
+        <div class="row">
+          <span style="font-size:13px;">Rate</span>
+          <span style="display:flex; align-items:center; gap:10px;">
+            <span style="width:96px; height:3px; background: rgba(56,189,248,.16);"><span style="display:block; width:58%; height:100%; background:#38BDF8;"></span></span>
+            <span class="val">92%</span>
+          </span>
+        </div>
+        <div class="row"><span style="font-size:13px;">Speaks</span><span class="val">quests &amp; penalties ▾</span></div>
+      </div>
+
+      <!-- The day -->
+      <div style="display:flex; flex-direction:column; gap:8px;">
+        <div class="lbl">THE DAY</div>
+        <div class="row"><span style="font-size:13px;">Reset hour</span><span class="val">04:00 · Europe/Madrid</span></div>
+        <div class="row"><span style="font-size:13px;">Difficulty</span><span class="val">NORMAL ▾</span></div>
+        <div class="row"><span style="font-size:13px;">Rotating quests</span><span class="val">2</span></div>
+      </div>
+    </div>
+
+    <div style="flex-grow: 1;"></div>
+
+    <div style="display: flex; border-top: 1px solid rgba(56,189,248,.22); background: rgba(6,16,26,.9);">
+      <div style="flex-grow: 1; padding: 13px 0; text-align: center; font-size: 10px; letter-spacing: .18em; color: #5C87A3;">STATUS</div>
+      <div style="flex-grow: 1; padding: 13px 0; text-align: center; font-size: 10px; letter-spacing: .18em; color: #5C87A3;">QUESTS</div>
+      <div style="flex-grow: 1; padding: 13px 0; text-align: center; font-size: 10px; letter-spacing: .18em; color: #5C87A3;">DUNGEON</div>
+      <div style="flex-grow: 1; padding: 13px 0; text-align: center; font-size: 10px; letter-spacing: .18em; color: #04070d; background: #38BDF8;">SYSTEM</div>
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

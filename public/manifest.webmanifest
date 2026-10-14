@@ -1,0 +1,10 @@
+{
+  "name": "unranked",
+  "short_name": "unranked",
+  "description": "A real-life System.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#04070d",
+  "theme_color": "#04070d",
+  "orientation": "portrait"
+}

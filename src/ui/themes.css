@@ -1,0 +1,366 @@
+/*
+ * Seven themes, one token vocabulary.
+ *
+ * Components reference semantic tokens only — never a raw hex, never a
+ * `--color-cyan`. That is the whole discipline: the moment a component knows
+ * it is cyan, the themes start drifting apart and only the default one stays
+ * good. Adding another theme means adding one block here plus one entry in
+ * `themeGrounds.ts`, and touching nothing else — `parchment` is the proof,
+ * since inverting the whole app to a light ground took no component change.
+ */
+
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Chakra Petch', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', monospace;
+  --font-body: 'Chakra Petch', 'Segoe UI', system-ui, sans-serif;
+}
+
+:root,
+[data-theme='hologram'] {
+  color-scheme: dark;
+
+  --color-ground: #04070d;
+  --color-ground-glow: rgba(56, 189, 248, 0.16);
+  --color-panel: rgba(13, 32, 50, 0.86);
+  --color-panel-soft: rgba(10, 24, 38, 0.8);
+  --color-panel-border: rgba(56, 189, 248, 0.28);
+  --color-panel-border-dim: rgba(56, 189, 248, 0.14);
+
+  --color-ink: #eaf6ff;
+  --color-ink-soft: #c7e4f5;
+  --color-ink-muted: #9dbccd;
+  --color-ink-faint: #86adc4;
+
+  --color-accent: #38bdf8;
+  --color-accent-bright: #7dd3fc;
+  --color-accent-dim: #2e6b85;
+  --color-on-accent: #04070d;
+
+  --color-craft: #f0c97a;
+  --color-danger: #f87171;
+  --color-danger-soft: #e9a6a6;
+  --color-decay: #c08a3e;
+  --color-success: #4e9e5e;
+
+  --tracking-system: 0.34em;
+  --tracking-label: 0.24em;
+
+  --radius-panel: 0px;
+  --panel-shadow: inset 0 0 32px rgba(56, 189, 248, 0.1), 0 0 24px rgba(4, 12, 22, 0.9);
+  --text-glow: 0 0 14px rgba(56, 189, 248, 0.6);
+  --scanline-opacity: 0.5;
+  --corner-bracket: 1;
+
+  --font-display-theme: var(--font-display);
+  --font-numeric: var(--font-mono);
+}
+
+[data-theme='monarch'] {
+  color-scheme: dark;
+
+  --color-ground: #0a0710;
+  --color-ground-glow: rgba(124, 58, 237, 0.22);
+  --color-panel: rgba(23, 14, 38, 0.7);
+  --color-panel-soft: rgba(18, 11, 30, 0.6);
+  --color-panel-border: rgba(212, 168, 85, 0.22);
+  --color-panel-border-dim: rgba(212, 168, 85, 0.12);
+
+  --color-ink: #f4effa;
+  --color-ink-soft: #e5ddee;
+  --color-ink-muted: #a99ac2;
+  --color-ink-faint: #a294bb;
+
+  --color-accent: #d4a855;
+  --color-accent-bright: #e8c687;
+  --color-accent-dim: #8a7350;
+  --color-on-accent: #0a0710;
+
+  --color-craft: #d4a855;
+  --color-danger: #c2557a;
+  --color-danger-soft: #d98aa4;
+  --color-decay: #9c7fa8;
+  --color-success: #7c9e6a;
+
+  --tracking-system: 0.42em;
+  --tracking-label: 0.26em;
+
+  --radius-panel: 0px;
+  --panel-shadow: none;
+  --text-glow: none;
+  --scanline-opacity: 0;
+  --corner-bracket: 0;
+
+  --font-display-theme: 'Cormorant Garamond', Georgia, serif;
+  --font-numeric: 'Cormorant Garamond', Georgia, serif;
+}
+
+[data-theme='terminal'] {
+  color-scheme: dark;
+
+  --color-ground: #0b0b0c;
+  --color-ground-glow: transparent;
+  --color-panel: #131315;
+  --color-panel-soft: #131315;
+  --color-panel-border: #232326;
+  --color-panel-border-dim: #1a1a1c;
+
+  --color-ink: #e9e7e2;
+  --color-ink-soft: #c9c7c2;
+  --color-ink-muted: #a5a39e;
+  --color-ink-faint: #9a989c;
+
+  --color-accent: #e8a33d;
+  --color-accent-bright: #f5c177;
+  --color-accent-dim: #8a6428;
+  --color-on-accent: #0b0b0c;
+
+  --color-craft: #e8a33d;
+  --color-danger: #d46a6a;
+  --color-danger-soft: #e09595;
+  --color-decay: #c08a3e;
+  --color-success: #4e9e5e;
+
+  --tracking-system: 0.1em;
+  --tracking-label: 0.08em;
+
+  --radius-panel: 0px;
+  --panel-shadow: none;
+  --text-glow: none;
+  --scanline-opacity: 0;
+  --corner-bracket: 0;
+
+  --font-display-theme: var(--font-mono);
+  --font-numeric: var(--font-mono);
+}
+
+[data-theme='falna'] {
+  color-scheme: dark;
+
+  --color-ground: #14100c;
+  --color-ground-glow: rgba(176, 141, 87, 0.14);
+  --color-panel: rgba(28, 22, 16, 0.6);
+  --color-panel-soft: rgba(24, 19, 14, 0.5);
+  --color-panel-border: rgba(176, 141, 87, 0.28);
+  --color-panel-border-dim: rgba(176, 141, 87, 0.14);
+
+  --color-ink: #f5eddf;
+  --color-ink-soft: #e8dcc8;
+  --color-ink-muted: #b0a184;
+  --color-ink-faint: #a89772;
+
+  --color-accent: #b08d57;
+  --color-accent-bright: #cfa870;
+  --color-accent-dim: #6e6047;
+  --color-on-accent: #14100c;
+
+  --color-craft: #c6a06a;
+  --color-danger: #dd8266;
+  --color-danger-soft: #e5a48f;
+  --color-decay: #c9a877;
+  --color-success: #9bb27c;
+
+  --tracking-system: 0.5em;
+  --tracking-label: 0.2em;
+
+  --radius-panel: 0px;
+  --panel-shadow: none;
+  --text-glow: none;
+  --scanline-opacity: 0;
+  --corner-bracket: 0;
+
+  --font-display-theme: 'EB Garamond', Georgia, serif;
+  --font-numeric: 'EB Garamond', Georgia, serif;
+}
+
+/*
+ * Crimson on obsidian. The army, not the throne — where monarch is restrained
+ * and gold, this one is the version that shows up when something is wrong.
+ */
+[data-theme='sovereign'] {
+  color-scheme: dark;
+
+  --color-ground: #0c0406;
+  --color-ground-glow: rgba(220, 38, 38, 0.18);
+  --color-panel: rgba(34, 10, 14, 0.78);
+  --color-panel-soft: rgba(26, 8, 11, 0.66);
+  --color-panel-border: rgba(239, 68, 68, 0.3);
+  --color-panel-border-dim: rgba(239, 68, 68, 0.15);
+
+  --color-ink: #fbe9e9;
+  --color-ink-soft: #edcfcf;
+  --color-ink-muted: #c49a9a;
+  --color-ink-faint: #b98d8d;
+
+  --color-accent: #e0393c;
+  --color-accent-bright: #ff6b6b;
+  --color-accent-dim: #7d2427;
+  --color-on-accent: #0c0406;
+
+  --color-craft: #e0a33d;
+  --color-danger: #ff7a7a;
+  --color-danger-soft: #ffa8a8;
+  --color-decay: #b5715a;
+  --color-success: #6fa86b;
+
+  --tracking-system: 0.38em;
+  --tracking-label: 0.22em;
+
+  --radius-panel: 0px;
+  --panel-shadow: inset 0 0 30px rgba(224, 57, 60, 0.08), 0 0 22px rgba(10, 3, 5, 0.9);
+  --text-glow: 0 0 16px rgba(224, 57, 60, 0.55);
+  --scanline-opacity: 0.28;
+  --corner-bracket: 1;
+
+  --font-display-theme: var(--font-display);
+  --font-numeric: var(--font-mono);
+}
+
+/*
+ * Green phosphor. Terminal's louder sibling: same monospace discipline, but it
+ * admits it is a CRT — the scanlines are the point rather than an artefact.
+ */
+[data-theme='phosphor'] {
+  color-scheme: dark;
+
+  --color-ground: #020705;
+  --color-ground-glow: rgba(34, 197, 94, 0.14);
+  --color-panel: rgba(6, 20, 13, 0.85);
+  --color-panel-soft: rgba(5, 16, 11, 0.75);
+  --color-panel-border: rgba(74, 222, 128, 0.26);
+  --color-panel-border-dim: rgba(74, 222, 128, 0.13);
+
+  --color-ink: #d6ffe4;
+  --color-ink-soft: #b6f3c9;
+  --color-ink-muted: #85c79a;
+  --color-ink-faint: #7bbb90;
+
+  --color-accent: #3ddc84;
+  --color-accent-bright: #86efac;
+  --color-accent-dim: #256b45;
+  --color-on-accent: #020705;
+
+  --color-craft: #d8d55a;
+  --color-danger: #ff6b6b;
+  --color-danger-soft: #ffa0a0;
+  --color-decay: #9fae52;
+  --color-success: #3ddc84;
+
+  --tracking-system: 0.12em;
+  --tracking-label: 0.1em;
+
+  --radius-panel: 0px;
+  --panel-shadow: inset 0 0 26px rgba(61, 220, 132, 0.08);
+  --text-glow: 0 0 12px rgba(61, 220, 132, 0.55);
+  --scanline-opacity: 0.85;
+  --corner-bracket: 0;
+
+  --font-display-theme: var(--font-mono);
+  --font-numeric: var(--font-mono);
+}
+
+/*
+ * The one light theme. A guild ledger in daylight rather than a window hanging
+ * in the dark, which is the only way this app is readable outdoors — every
+ * other theme here is near-black on purpose and none of them survive sunlight.
+ *
+ * Note what changes and what does not: only the token values. `--color-ink` is
+ * still the strongest text and `--color-ground` is still the page, so every
+ * component reads the same way it always did, inverted.
+ */
+[data-theme='parchment'] {
+  color-scheme: light;
+
+  --color-ground: #f2ece0;
+  --color-ground-glow: rgba(140, 106, 61, 0.12);
+  --color-panel: rgba(255, 252, 245, 0.9);
+  --color-panel-soft: rgba(247, 242, 231, 0.9);
+  --color-panel-border: rgba(90, 68, 40, 0.26);
+  --color-panel-border-dim: rgba(90, 68, 40, 0.13);
+
+  --color-ink: #23190f;
+  --color-ink-soft: #3b2d1c;
+  --color-ink-muted: #6a5842;
+  --color-ink-faint: #6f5c44;
+
+  --color-accent: #8a5a1f;
+  --color-accent-bright: #6d4715;
+  --color-accent-dim: #b09a76;
+  --color-on-accent: #fdf9f0;
+
+  --color-craft: #8a5a1f;
+  --color-danger: #a32626;
+  --color-danger-soft: #8c2020;
+  --color-decay: #8c6b3a;
+  --color-success: #3f6b3a;
+
+  --tracking-system: 0.46em;
+  --tracking-label: 0.2em;
+
+  --radius-panel: 0px;
+  --panel-shadow: 0 1px 2px rgba(60, 44, 24, 0.08);
+  --text-glow: none;
+  --scanline-opacity: 0;
+  --corner-bracket: 0;
+
+  --font-display-theme: 'EB Garamond', Georgia, serif;
+  --font-numeric: var(--font-mono);
+}
+
+/* --------------------------------------------------------------------- */
+
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: var(--color-ground);
+  color: var(--color-ink-soft);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* The atmospheric wash behind everything. Themes that want none set it transparent.
+   It sits above the background canvas (z-index 0) rather than below it: the
+   canvas is opaque, so a wash underneath would simply never be seen, and the
+   wash on top is what keeps an animated background reading as this theme's. */
+.ground-glow::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background: radial-gradient(120% 55% at 50% -8%, var(--color-ground-glow), transparent 62%);
+}
+
+/* Scanlines are hologram's signature. Other themes zero the opacity rather
+   than removing the element, so nothing has to know which theme is active. */
+.scanlines::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: var(--scanline-opacity);
+  background: repeating-linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--color-accent) 6%, transparent) 0 1px,
+    transparent 1px 3px
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
